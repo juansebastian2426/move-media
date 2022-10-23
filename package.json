@@ -1,0 +1,30 @@
+{
+  "name": "move-media",
+  "version": "1.0.1",
+  "description": "With this library you can move multimedia files to a folder that you pass to it, very useful when you download all the content of google photos since google photos downloads you with .json files and you will not want to move them, so with this library you can only move your multimedia files to a destination folder that you want",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "standard && node index.js",
+    "lint-fix": "standard --fix"
+  },
+  "keywords": ["move files", "move multimedia files", "move", "files", "png", "jpg", "jpeg", "mp4", "mp3"],
+  "author": {
+    "name": "tuttodev",
+    "email": "tuttodevv@gmail.com",
+    "url": "https://tuttodev.dev/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.1.2",
+    "glob": "^8.0.3",
+    "inquirer": "^9.1.4",
+    "progress": "^2.0.3",
+    "uuid": "^9.0.0",
+    "yargs": "^17.6.0"
+  },
+  "devDependencies": {
+    "@types/yargs": "^17.0.13",
+    "standard": "^17.0.0"
+  }
+}
