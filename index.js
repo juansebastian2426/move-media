@@ -9,6 +9,7 @@ import { moveOrCopyFiles } from './moveOrCopyFiles.js'
 const argv = yargs(hideBin(process.argv))
   .scriptName('move-media')
   .usage('$0 <command> [args]')
+  .version()
   .command('list-ext', 'list all extensions from the source folder', {
     path: {
       alias: 'p',
