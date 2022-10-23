@@ -22,7 +22,7 @@ export const moveOrCopyFiles = ({
   }
 
   const pathImages = `${systemPath}/**/*.*(${extentions.join('|')})`
-  const files = glob.sync(pathImages).slice(0, 100)
+  const files = glob.sync(pathImages)
 
   const filesLength = files.length
 
