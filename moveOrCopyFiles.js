@@ -21,12 +21,15 @@ export const moveOrCopyFiles = ({
     throw new Error(`${chalk.red('[ERROR]:')} The path to move does not exist`)
   }
 
-  const pathImages = `${systemPath}/**/*.*(${extentions.join('|')})`
-  const files = glob.sync(pathImages)
+  const globPath = `**/*.*(${extentions.join('|')})`
+  const files = glob.sync(globPath, {
+    cwd: path.join(systemPath),
+    absolute: true
+  })
 
   const filesLength = files.length
 
-  console.info(`${filesLength} media files will be moved ... \n`)
+  console.info(`${filesLength} media files will be ${isCopy ? 'copy' : 'move'} ... \n`)
 
   const bar = new ProgressBar(`🐢 moving :current of :total files ${chalk.green('[:bar]')} :percent ::etas`, {
     total: filesLength,
@@ -43,7 +46,8 @@ export const moveOrCopyFiles = ({
 
       const multiPath = files[i]
       const multiPathExt = path.extname(multiPath)
-      const fileName = `${uuidV4()}${multiPathExt}`
+      const baseName = path.basename(multiPath, multiPathExt)
+      const fileName = `${baseName}_${uuidV4()}${multiPathExt}`
 
       const sourcePath = multiPath
       const destinationPath = path.join(systemPathToMove, fileName)
@@ -55,6 +59,6 @@ export const moveOrCopyFiles = ({
       }
     }
   } catch (err) {
-    throw new Error(`${chalk.red('[Error]: error trying to move files -> ')} ${err}`)
+    throw new Error(`\n${chalk.red('[Error]: error trying to move files -> ')} ${err}`)
   }
 }

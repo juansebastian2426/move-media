@@ -6,3 +6,5 @@ With this library you can move multimedia files to a folder that you pass to it,
 npm i -g move-media
 move-media --help
 ```
+
+![process copy](/img-2.png)
