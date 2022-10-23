@@ -7,4 +7,4 @@ npm i -g move-media
 move-media --help
 ```
 
-![process copy](/img-2.png)
+![process copy](https://github.com/juansebastian2426/move-media/blob/1870443bfde8ba7166f9259fe4786eb34e0d29b4/img-2.png?raw=true)
