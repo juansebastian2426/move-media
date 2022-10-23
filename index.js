@@ -7,7 +7,7 @@ import { hideBin } from 'yargs/helpers'
 import { moveOrCopyFiles } from './moveOrCopyFiles.js'
 
 const argv = yargs(hideBin(process.argv))
-  .scriptName('mv-media')
+  .scriptName('move-media')
   .usage('$0 [args]')
   .option('ext', {
     alias: 'e',
