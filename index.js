@@ -33,7 +33,7 @@ const argv = yargs(hideBin(process.argv))
     ext: {
       alias: 'e',
       array: true,
-      default: ['png', 'jpg', 'jpeg'],
+      demandOption: true,
       describe: 'Extensions to look for in the path',
       type: 'array',
       defaultDescription: 'png jpg jpeg'
@@ -55,7 +55,7 @@ const argv = yargs(hideBin(process.argv))
     ext: {
       alias: 'e',
       array: true,
-      default: ['png', 'jpg', 'jpeg'],
+      demandOption: true,
       describe: 'Extensions to look for in the path',
       type: 'array',
       defaultDescription: 'png jpg jpeg'
