@@ -8,4 +8,4 @@ move-media --help
 ```
 
 ![process copy](https://github.com/juansebastian2426/move-media/blob/1870443bfde8ba7166f9259fe4786eb34e0d29b4/img-2.png?raw=true)
-![process moving](https://github.com/juansebastian2426/move-media/blob/1870443bfde8ba7166f9259fe4786eb34e0d29b4/img-3.png?raw=true)
+![process moving](https://github.com/juansebastian2426/move-media/blob/91c0b5067fbed4a933cbff23c59019eeedae1a9a/img-3.png?raw=true)
